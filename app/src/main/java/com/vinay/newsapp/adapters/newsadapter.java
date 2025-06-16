@@ -5,11 +5,13 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.squareup.picasso.Picasso;
 import com.vinay.newsapp.DetailActivity;
 import com.vinay.newsapp.R;
 import com.vinay.newsapp.models.newsmodel;
@@ -38,6 +40,7 @@ public class newsadapter extends RecyclerView.Adapter<newsadapter.viewHolder>{
         newsmodel model= list.get(position);
         holder.title.setText(model.getTitle());
         holder.description.setText(model.getDescription());
+        Picasso.get().load(model.getImage()).placeholder(R.drawable.placeholder_image).into(holder.imageView);
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -58,9 +61,11 @@ public class newsadapter extends RecyclerView.Adapter<newsadapter.viewHolder>{
     public class viewHolder extends RecyclerView.ViewHolder
     {
         TextView title,description;
+        ImageView imageView;
         public viewHolder(@NonNull View itemView) {
             super(itemView);
             title=itemView.findViewById(R.id.titleTextView);
+            imageView=itemView.findViewById(R.id.imageView);
             description=itemView.findViewById(R.id.descriptionTextView);
         }
     }
