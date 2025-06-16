@@ -10,7 +10,7 @@
     <!-- CardView for News Article -->
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="160dp"
+        android:layout_height="140dp"
         android:layout_margin="8dp"
         app:cardCornerRadius="12dp"
         app:cardElevation="6dp"
@@ -26,7 +26,7 @@
             <ImageView
                 android:id="@+id/imageView"
                 android:layout_width="140dp"
-                android:layout_height="140dp"
+                android:layout_height="120dp"
                 android:scaleType="centerCrop"
                 android:layout_marginEnd="8dp"
                 android:background="@drawable/news_placeholder" />
