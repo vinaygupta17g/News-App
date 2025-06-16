@@ -1,6 +1,7 @@
 package com.vinay.newsapp.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.vinay.newsapp.DetailActivity;
 import com.vinay.newsapp.R;
 import com.vinay.newsapp.models.newsmodel;
 
@@ -36,6 +38,16 @@ public class newsadapter extends RecyclerView.Adapter<newsadapter.viewHolder>{
         newsmodel model= list.get(position);
         holder.title.setText(model.getTitle());
         holder.description.setText(model.getDescription());
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent =new Intent(context, DetailActivity.class);
+                intent.putExtra("title",model.getTitle());
+                intent.putExtra("image",model.getImage());
+                intent.putExtra("description",model.getDescription());
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override

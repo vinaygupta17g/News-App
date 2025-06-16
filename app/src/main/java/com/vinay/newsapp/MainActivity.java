@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
                     for(int i=0;i<jsonArray.length();i++)
                     {
                         JSONObject jsonObject =jsonArray.getJSONObject(i);
-                        newsmodel model =new newsmodel(jsonObject.getString("article_id"),"v",jsonObject.getString("title"),jsonObject.getString("description"));
+                        newsmodel model =new newsmodel(jsonObject.getString("article_id"),jsonObject.getString("image_url"),jsonObject.getString("title"),jsonObject.getString("description"));
                         list.add(model);
                         newsadapter.notifyDataSetChanged();
                     }
