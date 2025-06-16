@@ -1,9 +1,10 @@
 package com.vinay.newsapp.models;
 
 public class newsmodel {
-    String image,title,description;
+    String id,image,title,description;
 
-    public newsmodel(String image, String title, String description) {
+    public newsmodel(String id,String image, String title, String description) {
+        this.id=id;
         this.image = image;
         this.title = title;
         this.description = description;
@@ -33,5 +34,13 @@ public class newsmodel {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }
