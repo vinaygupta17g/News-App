@@ -2,6 +2,7 @@ package com.vinay.newsapp;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -14,7 +15,7 @@ import androidx.core.view.WindowInsetsCompat;
 import com.squareup.picasso.Picasso;
 
 public class DetailActivity extends AppCompatActivity {
-    ImageView imageView;
+    ImageView imageView,back;
     TextView title,description;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,5 +31,14 @@ public class DetailActivity extends AppCompatActivity {
         title.setText(titles);
         description.setText(descriptions);
         Picasso.get().load(images).placeholder(R.drawable.placeholder_image).into(imageView);
+        back=findViewById(R.id.back);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent =new Intent(DetailActivity.this,MainActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
     }
 }
