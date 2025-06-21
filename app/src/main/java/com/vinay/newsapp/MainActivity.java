@@ -26,12 +26,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         recyclerView=findViewById(R.id.recyclerView);
-        newsadapter newsadapter =new newsadapter(list,this);
-        recyclerView.setAdapter(newsadapter);
-
         LinearLayoutManager manager =new LinearLayoutManager(this);
         recyclerView.setLayoutManager(manager);
+        loadData("alwar");
+    }
 
+    public void loadData(String about)
+    {
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         JsonObjectRequest jsonObjectRequest =new JsonObjectRequest(Request.Method.GET,URL,null,response -> {
             try {
@@ -43,8 +44,9 @@ public class MainActivity extends AppCompatActivity {
                         JSONObject jsonObject =jsonArray.getJSONObject(i);
                         newsmodel model =new newsmodel(jsonObject.getString("article_id"),jsonObject.getString("image_url"),jsonObject.getString("title"),jsonObject.getString("description"));
                         list.add(model);
-                        newsadapter.notifyDataSetChanged();
                     }
+                    newsadapter newsadapter =new newsadapter(list,this);
+                    recyclerView.setAdapter(newsadapter);
                 }
             }
             catch(Exception e)
@@ -56,4 +58,5 @@ public class MainActivity extends AppCompatActivity {
         });
         requestQueue.add(jsonObjectRequest);
     }
+
 }
