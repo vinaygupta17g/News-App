@@ -18,7 +18,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
-    private static final String URL = "https://newsdata.io/api/1/latest?apikey=pub_5230629002244320a8ede36ac1fea37c&q=";
+    private static final String URL = "https://newsdata.io/api/1/latest?apikey=pub_5230629002244320a8ede36ac1fea37c&q=alwar";
     ArrayList<newsmodel> list =new ArrayList<>();
     RecyclerView recyclerView;
     @Override
@@ -26,15 +26,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         recyclerView=findViewById(R.id.recyclerView);
+        loadData("alwar");
         LinearLayoutManager manager =new LinearLayoutManager(this);
         recyclerView.setLayoutManager(manager);
-        loadData("alwar");
     }
 
     public void loadData(String about)
     {
         RequestQueue requestQueue = Volley.newRequestQueue(this);
-        JsonObjectRequest jsonObjectRequest =new JsonObjectRequest(Request.Method.GET,URL+about,null,response -> {
+        JsonObjectRequest jsonObjectRequest =new JsonObjectRequest(Request.Method.GET,URL,null,response -> {
             try {
                 if(response.getString("status").equals("success"))
                 {
