@@ -3,22 +3,17 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.ImageView;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.vinay.newsapp.adapters.newsadapter;
 import com.vinay.newsapp.models.newsmodel;
-
 import org.json.JSONArray;
 import org.json.JSONObject;
-
 import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
     private static final String URL = "https://newsdata.io/api/1/latest?apikey=pub_5230629002244320a8ede36ac1fea37c&q=";
@@ -39,7 +34,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
     public void loadData(String about)
     {
         RequestQueue requestQueue = Volley.newRequestQueue(this);
@@ -68,5 +62,4 @@ public class MainActivity extends AppCompatActivity {
         });
         requestQueue.add(jsonObjectRequest);
     }
-
 }
