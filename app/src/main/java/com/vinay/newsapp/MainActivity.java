@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.srchbtn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                loadData(((EditText)findViewById(R.id.search)).getText().toString());
             }
         });
     }
