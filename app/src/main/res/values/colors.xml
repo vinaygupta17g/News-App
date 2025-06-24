@@ -78,4 +78,39 @@
     <color name="detail_description_color">#757575</color>
     <color name="detail_background">#FFFFFF</color>
     <color name="detail_header_overlay">#40000000</color>
+
+        <!-- Primary Colors -->
+        <color name="primary">#4299E1</color>
+        <color name="primary_dark">#3182CE</color>
+        <color name="primary_light">#90CDF4</color>
+
+        <!-- Text Colors -->
+        <color name="text_dark">#2D3748</color>
+        <color name="text_medium">#4A5568</color>
+        <color name="text_light">#718096</color>
+        <color name="text_white">#FFFFFF</color>
+
+        <!-- Background/Gray Colors -->
+        <color name="bg_white">#FFFFFF</color>
+        <color name="gray_50">#F7FAFC</color>
+        <color name="gray_100">#EDF2F7</color>
+        <color name="gray_200">#E2E8F0</color>
+        <color name="gray_300">#CBD5E0</color>
+        <color name="gray_400">#A0AEC0</color>
+
+        <!-- Dark Theme Colors -->
+        <color name="dark_bg">#1A202C</color>
+        <color name="dark_text">#E2E8F0</color>
+        <color name="dark_hint">#A0AEC0</color>
+
+        <!-- Search UI Specific -->
+        <color name="search_icon_tint">#4299E1</color>
+        <color name="search_border">#E2E8F0</color>
+        <color name="search_hint">#718096</color>
+
+        <!-- Semantic Colors -->
+        <color name="success">#48BB78</color>
+        <color name="error">#F56565</color>
+        <color name="warning">#ECC94B</color>
+        <color name="info">#4299E1</color>
 </resources>
