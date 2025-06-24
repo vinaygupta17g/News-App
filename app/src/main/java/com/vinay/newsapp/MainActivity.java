@@ -48,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
                 if(response.getString("status").equals("success"))
                 {
                     JSONArray jsonArray =response.getJSONArray("results");
+                    list.clear();
                     for(int i=0;i<jsonArray.length();i++)
                     {
                         JSONObject jsonObject =jsonArray.getJSONObject(i);
