@@ -96,7 +96,7 @@
         <color name="gray_100">#EDF2F7</color>
         <color name="gray_200">#E2E8F0</color>
         <color name="gray_300">#CBD5E0</color>
-        <color name="gray_400">#A0AEC0</color>
+        <color name="gray_500">#A0AEC0</color>
 
         <!-- Dark Theme Colors -->
         <color name="dark_bg">#1A202C</color>
