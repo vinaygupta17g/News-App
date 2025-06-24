@@ -1,6 +1,9 @@
 package  com.vinay.newsapp;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -29,6 +32,12 @@ public class MainActivity extends AppCompatActivity {
         loadData("alwar");
         LinearLayoutManager manager =new LinearLayoutManager(this);
         recyclerView.setLayoutManager(manager);
+        findViewById(R.id.srchbtn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
     }
 
     public void loadData(String about)
