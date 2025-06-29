@@ -122,41 +122,6 @@
                     android:justificationMode="inter_word" />
 
             </LinearLayout>
-
-            <!-- Additional Info Section (Optional) -->
-            <LinearLayout
-                android:id="@+id/ll_additional_info"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:visibility="gone">
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/divider_color"
-                    android:layout_marginVertical="16dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/additional_info"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/text_primary"
-                    android:layout_marginBottom="8dp" />
-
-                <!-- You can add more TextViews or custom layouts here for additional data -->
-                <TextView
-                    android:id="@+id/tv_additional_info"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="14sp"
-                    android:textColor="@color/text_secondary"
-                    android:lineSpacingExtra="2dp" />
-
-            </LinearLayout>
-
         </LinearLayout>
 
         <!-- Loading State -->
