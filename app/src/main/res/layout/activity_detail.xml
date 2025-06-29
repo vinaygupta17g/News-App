@@ -123,42 +123,6 @@
 
             </LinearLayout>
         </LinearLayout>
-
-        <!-- Error State -->
-        <LinearLayout
-            android:id="@+id/ll_error"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:visibility="gone"
-            android:padding="32dp">
-
-            <ImageView
-                android:layout_width="64dp"
-                android:layout_height="64dp"
-                android:src="@drawable/ic_error"
-                android:layout_marginBottom="16dp"
-                android:contentDescription="@string/error_icon" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/error_loading_data"
-                android:textSize="16sp"
-                android:textColor="@color/text_secondary"
-                android:textAlignment="center"
-                android:layout_marginBottom="16dp" />
-
-            <Button
-                android:id="@+id/btn_retry"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/retry"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
-
-        </LinearLayout>
-
     </LinearLayout>
 
 </ScrollView>
